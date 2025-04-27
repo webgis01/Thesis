@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14.5px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw; 
+    padding: 0;
+    margin: 0;
+}
+.map {
+    width: 100%; 
+    height: 100%; 
+}
+
+.sidemenu {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+    width: 340px; 
+  }
+
+.flood-watch-header {
+    background: #00aaff; 
+    color: white;
+    text-align: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1001;
+}
+  
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Style the popup card */
+  .popup-card {
+    position: absolute;
+    top: calc(20px + 180px); /* Adjust positioning based on the size of the legend and any other content */
+    right: 20px; /* Align with the right edge of the map */
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensure it appears on top of the map */
+    width: 340px; /* Limit the width of the popup card */
+    margin-bottom: 0;
+  }
+  
+  .popup-card h4 {
+    margin-top: 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .recenter-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Make sure it appears above the map */
+  }
+  
+  .recenter-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+/* Adjust for different devices */
+@media only screen and (max-width: 1200px) {
+    .map-container {
+        height: 100vh; /* Full height for laptops and larger devices */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .map-container {
+        height: 100vh; /* Full height for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .map-container {
+        height: 100vh; /* Full height for mobile phones */
+    }
+}
